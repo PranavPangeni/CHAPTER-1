@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Navbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #6b6b6b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #fff;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #181818;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #313131;
+        }
+
+        .blownav {
+            background-color: rgb(216, 216, 216);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .subcont {
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .subcont h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>WELCOME TO THE WONDERLAND OF COMPUTER SCIENCE</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">MENU</a>
+        <a href="UNIT1.html">Chapter 1</a>
+        <a href="UNIT2.html">Chapter 2</a>
+        <a href="UNIT3.html">Chapter 3</a>
+        <a href="UNIT4.html">Chapter 4</a>
+        <a href="UNIT5.html">Chapter 5</a>
+        <a href="UNIT6.html">Chapter 6</a>
+        <a href="UNIT7.html">Chapter 7</a>
+    </div>
+
+    <div class="blownav">
+        <div class="subcont">
+            <h2>Data:</h2>
+            <p>Data refers to raw, unprocessed facts and figures without context. It can be in various forms such as numbers, text, images, or sounds. On its own, data lacks meaning and requires processing to become useful information.</p>
+        </div>
+
+        <div class="subcont">
+            <h2>Information:</h2>
+            <p>Information is data that has been processed or organized in a way that adds meaning or value. For example, a list of dates is data, but a calendar is information. Information is crucial for decision-making and problem-solving in various fields.</p>
+        </div>
+
+        <div class="subcont">
+            <h2>Features of Information:</h2>
+            <ol>
+                <li><strong>Subjectivity:</strong> Refers to how personal opinions or bias may influence the information.</li>
+                <li><strong>Timeliness:</strong> Indicates how current or recent the information is, which helps in relevance.</li>
+                <li><strong>Accuracy:</strong> Measures how precise and correct the information is, essential for effective decision-making.</li>
+                <li><strong>Adequacy:</strong> Ensures that the information is sufficient to meet specific needs or goals.</li>
+            </ol>
+        </div>
+
+        <div class="subcont">
+            <h2>Database and its Purpose:</h2>
+            <p>A database is an organized collection of data, typically stored and accessed electronically. Its primary purpose is to efficiently store, retrieve, and manage data, ensuring consistency, security, and accessibility. Databases support various applications, from business operations to scientific research.</p>
+        </div>
+
+        <div class="subcont">
+            <h2>Terminologies in Database:</h2>
+            <ol>
+                <li><strong>Table:</strong> A collection of related data entries organized in rows and columns.</li>
+                <li><strong>Field:</strong> A single data element or attribute within a table, represented by a column.</li>
+                <li><strong>Record:</strong> A complete set of fields (a row) in a table, representing a single entity.</li>
+                <li><strong>Tuple:</strong> Another term for a record or row in a table.</li>
+                <li><strong>Object:</strong> An instance of a class in object-oriented databases, encapsulating data and behavior.</li>
+                <li><strong>Keys:</strong> Essential components used to uniquely identify records within a table and establish relationships between different tables.</li>
+            </ol>
+        </div>
+
+        <div class="subcont">
+            <h2>Types of Database Model:</h2>
+            <ol>
+                <li><strong>Hierarchical:</strong> Organizes data in a tree-like structure with a single parent per record. It’s fast for one-to-many relationships.</li>
+                <li><strong>Network:</strong> Allows many-to-many relationships with records connected through links, forming a graph structure.</li>
+                <li><strong>Relational:</strong> Stores data in tables (relations), with powerful querying capabilities using SQL.</li>
+                <li><strong>Entity-Relational (ER):</strong> Uses ER diagrams to model data relationships visually before database creation.</li>
+            </ol>
+        </div>
+
+        <div class="subcont">
+            <h2>Integrity Constraints and Types:</h2>
+            <ol>
+                <li><strong>Domain Constraint:</strong> Ensures values in a column fall within a predefined domain or set.</li>
+                <li><strong>Entity Integrity:</strong> Ensures each table has a primary key and no part of it is NULL.</li>
+                <li><strong>Referential Integrity:</strong> Ensures foreign key values match existing values in the referenced table or are NULL.</li>
+                <li><strong>Key Constraint:</strong> Ensures uniqueness and identification through primary and candidate keys.</li>
+            </ol>
+        </div>
+
+        <div class="subcont">
+            <h2>Normalization:</h2>
+            <p>Normalization is the process of organizing data to reduce redundancy and improve data integrity.</p>
+
+            <h3>Normal Forms:</h3>
+            <ol>
+                <li><strong>1NF (First Normal Form):</strong> Eliminates repeating groups by ensuring atomicity of values.</li>
+                <li><strong>2NF (Second Normal Form):</strong> Removes partial dependencies by ensuring full functional dependency on primary keys.</li>
+                <li><strong>3NF (Third Normal Form):</strong> Removes transitive dependencies to further refine data structure.</li>
+            </ol>
+
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Minimizes data redundancy.</li>
+                <li>Improves data consistency and integrity.</li>
+                <li>Simplifies database maintenance.</li>
+            </ul>
+
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li>May lead to complex queries.</li>
+                <li>Can reduce performance due to multiple table joins.</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>Centralized and Distributed Database:</h2>
+            <p><strong>Centralized:</strong> All data is stored in a single central location.</p>
+            <p><strong>Distributed:</strong> Data is spread across multiple locations connected via a network.</p>
+
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Improved reliability and availability (in distributed).</li>
+                <li>Faster local access (in distributed).</li>
+                <li>Central control and simplicity (in centralized).</li>
+            </ul>
+
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li>Single point of failure (centralized).</li>
+                <li>Complex synchronization (distributed).</li>
+                <li>Higher cost and setup (distributed).</li>
+            </ul>
+
+            <h3>Comparison:</h3>
+            <p>While centralized systems are simpler and cost-effective, distributed systems offer better performance and fault tolerance.</p>
+        </div>
+
+        <div class="subcont">
+            <h2>Database Security:</h2>
+            <p>Database security involves protecting the database from unauthorized access, breaches, and malicious threats.</p>
+
+            <h3>Challenges:</h3>
+            <ul>
+                <li>Unauthorized access</li>
+                <li>SQL injection</li>
+                <li>Data leaks and insider threats</li>
+            </ul>
+
+            <h3>Security Measures:</h3>
+            <ul>
+                <li>User authentication and roles</li>
+                <li>Encryption of data at rest and in transit</li>
+                <li>Firewalls and intrusion detection systems</li>
+            </ul>
+
+            <h3>Roles of DBA (Database Administrator):</h3>
+            <ul>
+                <li>Maintain performance, security, and integrity of the database.</li>
+                <li>Implement backups and recovery plans.</li>
+                <li>Manage user roles and permissions.</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>Practical Topics: DDL and DML Languages</h2>
+            <p><strong>DDL (Data Definition Language):</strong> Includes commands like <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code> used to define or modify database structure.</p>
+            <p><strong>DML (Data Manipulation Language):</strong> Includes <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> for manipulating data within the tables.</p>
+        </div>
+
+        <div class="subcont">
+            <h2>SQL Data Types:</h2>
+            <ol>
+                <li><strong>CHAR:</strong> Fixed-length character string.</li>
+                <li><strong>VARCHAR:</strong> Variable-length character string.</li>
+                <li><strong>BINARY:</strong> Fixed-length binary data.</li>
+                <li><strong>VARBINARY:</strong> Variable-length binary data.</li>
+                <li><strong>TINYBLOB:</strong> Very small binary object (up to 255 bytes).</li>
+                <li><strong>TINYTEXT:</strong> Very small text string.</li>
+                <li><strong>TEXT:</strong> Standard large text field (up to 65,535 characters).</li>
+                <li><strong>LONGTEXT:</strong> Very large text string (up to 4GB).</li>
+                <li><strong>ENUM:</strong> A string object with a predefined set of values.</li>
+                <li><strong>BIT:</strong> Stores bit-field values (0, 1).</li>
+                <li><strong>TINYINT:</strong> Integer from -128 to 127 (1 byte).</li>
+                <li><strong>BOOLEAN:</strong> Logical true/false (alias for TINYINT(1)).</li>
+                <li><strong>INTEGER:</strong> Standard integer value.</li>
+                <li><strong>FLOAT:</strong> Floating-point number (single precision).</li>
+                <li><strong>DOUBLE:</strong> Floating-point number (double precision).</li>
+                <li><strong>DECIMAL:</strong> Fixed-point number with exact precision.</li>
+                <li><strong>DATE:</strong> Stores date (YYYY-MM-DD).</li>
+                <li><strong>DATETIME:</strong> Stores date and time (YYYY-MM-DD HH:MM:SS).</li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>
