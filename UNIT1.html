@@ -291,6 +291,39 @@
                     </ul>
                 </li>
             </ol>
+
+             <h3>11. DBMS Questions</h3>
+             <strong>a. Create a table named students with the fields: Id, Name, Class, and Marks.</strong>
+             <p><code>CREATE TABLE students (
+                        Id INT PRIMARY KEY,
+                        Name VARCHAR(50),
+                        Class VARCHAR(10),
+                        Marks INT
+                        );</code></p>
+             <img src = "createtable.png" widht="300" height="100">
+             <strong> b. Insert records into the students table with appropriate values.</strong>
+             <p><code>INSERT INTO students (Id, Name, Class, Marks) VALUES
+                        (1, 'Joe Root', '12A', 92),
+                        (2, 'Ben Stokes', '12A', 88),
+                        (3, 'James Anderson', '12B', 75),
+                        (4, 'Anita Broad', '12C', 80),
+                        (5, 'Jonny Bairstow', '12B', 85);</code></p>
+             <img src = "insertinfo.png" widht="400" height="300">
+             <strong>c. Display all records from the students table.</strong>
+             <p><code>SELECT * FROM students;</code></p>
+             <img src = "display.png" widht="400" height="500">
+             <strong>d. Update the marks of a student whose name is 'Anita' to 85.</strong>
+             <p><code>UPDATE students
+                        SET Marks = 85
+                        WHERE Name = 'Anita';
+                        </code></p>
+             <img src = "Anita.png" widht="300" height="100">
+             <img src = "Anita2.png" widht="400" height="300">
+             <strong>e. Delete the record of the student with id = 3.</strong>
+             <p><code>DELETE FROM students
+                        WHERE Id = 3;</code></p>
+             <img src = "Delete.png" widht="300" height="100">
+             <img src = "Delete2.png" widht="300" height="400">
         </div>
     </div>
 
