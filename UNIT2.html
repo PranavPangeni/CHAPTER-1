@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming - Functions and Storage Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #6b6b6b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #fff;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #181818;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #313131;
+        }
+
+        .blownav {
+            background-color: rgb(216, 216, 216);
+            margin: 20px auto;
+            width: 85%;
+            border-radius: 15px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .subcont {
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .subcont h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>WELCOME TO THE WORLD OF C PROGRAMMING</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">MENU</a>
+        <a href="UNIT1.html">Chapter 1</a>
+        <a href="UNIT2.html">Chapter 2</a>
+        <a href="UNIT3.html">Chapter 3</a>
+        <a href="UNIT4.html">Chapter 4</a>
+        <a href="UNIT5.html">Chapter 5</a>
+        <a href="UNIT6.html">Chapter 6</a>
+        <a href="UNIT7.html">Chapter 7</a>
+    </div>
+
+    <div class="blownav">
+        <div class="subcont">
+            <h2>1. Working with a Function</h2>
+            <h3>a. Define Function</h3>
+            <p>A function in C is a block of code that performs a specific task, which is grouped together under a name and can be invoked from other parts of the program. It improves modularity, reusability, and maintainability of code.</p>
+
+            <h3>b. Syntax of Functions</h3>
+            <pre><code>return_type function_name(parameter_list) {
+    // Function body
+    return value;
+}</code></pre>
+
+            <h3>c. Types of Functions</h3>
+            <ul>
+                <li><strong>Library Functions:</strong> Pre-defined in C libraries, e.g., <code>printf()</code>, <code>scanf()</code>.</li>
+                <li><strong>User-defined Functions:</strong> Created by the programmer to perform custom tasks.</li>
+            </ul>
+
+            <h3>d. Components of Function</h3>
+            <ul>
+                <li><strong>Function Prototype:</strong> Declares the function’s signature before usage.</li>
+                <li><strong>Function Call:</strong> Invocation of the function within <code>main()</code> or another function.</li>
+                <li><strong>Function Definition:</strong> Complete implementation of what the function does.</li>
+                <li><strong>Return Type:</strong> Specifies the type of value returned, or <code>void</code> for none.</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>2. Categories of Function with Examples</h2>
+            <ul>
+                <li><strong>With Return Type, No Arguments:</strong>
+                    <pre><code>int giveNumber() {
+    return 100;
+}</code></pre>
+                </li>
+                <li><strong>With Return Type, With Arguments:</strong>
+                    <pre><code>int sum(int a, int b) {
+    return a + b;
+}</code></pre>
+                </li>
+                <li><strong>No Return Type, No Arguments:</strong>
+                    <pre><code>void greet() {
+    printf("Hello\n");
+}</code></pre>
+                </li>
+                <li><strong>No Return Type, With Arguments:</strong>
+                    <pre><code>void showSquare(int x) {
+    printf("Square is %d", x * x);
+}</code></pre>
+                </li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>3. Storage Classes</h2>
+            <ul>
+                <li><strong>Automatic (auto):</strong> Default for local variables; lifetime limited to block; not explicitly required.</li>
+                <li><strong>External (extern):</strong> Declares global variables accessible across files.</li>
+                <li><strong>Register:</strong> Stored in CPU registers for faster access; limited in size and number.</li>
+                <li><strong>Static:</strong> Retains value between function calls; lifetime is the entire program.</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>4. Recursive Function with Syntax and Examples</h2>
+            <p>A recursive function is a function that calls itself. It requires a base condition to terminate recursion and prevent infinite loops.</p>
+            <pre><code>int factorial(int n) {
+    if (n == 0) return 1;
+    else return n * factorial(n - 1);
+}</code></pre>
+
+            <pre><code>int fibonacci(int n) {
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
+    else return fibonacci(n - 1) + fibonacci(n - 2);
+}</code></pre>
+        </div>
+
+        <div class="subcont">
+            <h2>5. Passing Array to a Function</h2>
+            <p>Arrays in C are passed to functions by reference. This means any modifications made inside the function reflect in the original array.</p>
+            <h3>Example 1: Printing Elements</h3>
+            <pre><code>void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+}</code></pre>
+
+            <h3>Example 2: Sum of Array Elements</h3>
+            <pre><code>int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}</code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
