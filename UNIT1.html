@@ -196,7 +196,7 @@
             <ol>
                 <li>
                     <h3>What is Database and DBMS? List out the advantages and disadvantages of DBMS.</h3>
-                    <p>A database is an organized collection of data. A Database Management System (DBMS) is software used to manage, store, retrieve, and manipulate data in databases. It provides tools for data handling while ensuring data integrity and security.</p>
+                    <p>A database is an organized collection of data that is stored and accessed electronically. It allows for efficient storage, retrieval, and management of information. A Database Management System (DBMS) is software that helps in creating, managing, and manipulating databases. It serves as an interface between the database and its users or application programs.</p>
                     <p><strong>Advantages:</strong> Reduced redundancy, data consistency, easy access and management, enhanced security, backup and recovery options.</p>
                     <p><strong>Disadvantages:</strong> High cost, complexity, system failure risk, requires technical expertise, performance overhead for small datasets.</p>
                 </li>
@@ -213,15 +213,15 @@
                 <li>
                     <h3>Explain different models of DBMS with advantages and disadvantages:</h3>
                     <ol>
-                        <li><strong>Hierarchical Model:</strong> Tree-like structure, easy for one-to-many relationships.
+                        <li><strong>Hierarchical Model:</strong> This model organizes data in a tree-like structure where each record has a single parent and can have multiple children.
                             <br><strong>Advantages:</strong> Fast access, simplicity.
                             <br><strong>Disadvantages:</strong> Complex to manage many-to-many relationships.
                         </li>
-                        <li><strong>Network Model:</strong> Graph structure.
+                        <li><strong>Network Model:</strong> Data is represented as records connected by links in a graph, allowing more complex relationships.
                             <br><strong>Advantages:</strong> Supports complex relationships.
                             <br><strong>Disadvantages:</strong> Difficult to design and maintain.
                         </li>
-                        <li><strong>Relational Model:</strong> Uses tables.
+                        <li><strong>Relational Model:</strong> Data is stored in tables (relations), and relationships are represented through foreign keys.
                             <br><strong>Advantages:</strong> Flexibility, SQL support.
                             <br><strong>Disadvantages:</strong> Slower performance for very large data sets.
                         </li>
@@ -229,7 +229,7 @@
                 </li>
                 <li>
                     <h3>What is a relational database? How is it different from other database models?</h3>
-                    <p>Relational databases store data in tables with rows and columns. They differ from hierarchical or network databases by supporting more flexible querying and table relationships using primary and foreign keys rather than fixed paths.</p>
+                    <p>A relational database is a type of database that stores data in tables consisting of rows and columns. It uses relational algebra and SQL for querying and managing data. The relationships between tables are established through primary and foreign keys.</p>
                 </li>
                 <li>
                     <h3>What is data redundancy? How does DBMS help in reducing it?</h3>
@@ -263,13 +263,13 @@
                 </li>
                 <li>
                     <h3>Explain the terms: primary key, foreign key, and candidate key with examples.</h3>
-                    <p><strong>Primary Key:</strong> Uniquely identifies a record. Example: Student ID.
-                    <br><strong>Foreign Key:</strong> Links two tables. Example: Course ID in Enrollment table refers to Course table.
-                    <br><strong>Candidate Key:</strong> Field(s) that can qualify as a primary key.</p>
+                    <p><strong>Primary Key:</strong> A primary key is a column or set of columns in a table that uniquely identifies each record. For example, in a Student table, StudentID is a primary key.
+                    <br><strong>Foreign Key:</strong> A foreign key is a column that creates a relationship between two tables by referring to the primary key of another table. For example, CourseID in the Enrollment table may refer to CourseID in the Course table.
+                    <br><strong>Candidate Key:</strong> Field(s) A candidate key is any column or set of columns that can serve as a primary key. For example, in a table with columns StudentID, Email, and PhoneNumber, both Email and StudentID can be candidate keys if they contain unique values.</p>
                 </li>
                 <li>
                     <h3>What is SQL? Explain its components and common functions.</h3>
-                    <p>SQL (Structured Query Language) is used for managing relational databases. 
+                    <p>Structured Query Language (SQL) is a standardized language used to manage relational databases. It enables users to create, read, update, and delete data.
                     <br><strong>Components:</strong> DDL (CREATE, ALTER), DML (INSERT, SELECT), DCL (GRANT, REVOKE), TCL (COMMIT, ROLLBACK).</p>
                 </li>
                 <li>
