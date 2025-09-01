@@ -270,13 +270,15 @@ int *p = arr;</code>
 
     <h3>File Handling Functions</h3>
     <ul>
-      <li><code>fopen(), fclose()</code> – Open/close file</li>
-      <li><code>getc(), putc()</code> – Read/write single character</li>
-      <li><code>fprintf(), fscanf()</code> – Formatted I/O</li>
-      <li><code>getw(), putw()</code> – Read/write integers</li>
-      <li><code>fgets(), fputs()</code> – String I/O</li>
-      <li><code>fread(), fwrite()</code> – Block I/O</li>
-      <li><code>remove(), rename()</code> – File operations</li>
+      <li><code>fopen(filename), fclose(filename)</code> – Open/close file</li>
+      <li><code>int getc(FILE *fp);
+                int putc(int ch, FILE *fp);</code> – Read/write single character</li>
+      <li><code>int fprintf(FILE *fp, const char *format, ...);
+                int fscanf(FILE *fp, const char *format, ...);</code> – Formatted I/O</li>
+      <li><code>fgetw(FILE *fp);, fputw(int n, fp)</code> – Read/write integers</li>
+      <li><code>fgets(char str, int n, FILE *fp), fputs(char *str, int n, FILE *fp)</code> – String I/O</li>
+      <li><code>fread(void *ptr, size_t size, size_t n, FILE *fp), fwrite( void *ptr, size_t size, size_t n, FILE *fp)</code> – Block I/O</li>
+      <li><code>remove(Filename), rename(old_filename, new_filename)</code> – File operations</li>
     </ul>
 
     <h3>Random Access Functions</h3>
@@ -288,17 +290,21 @@ int *p = arr;</code>
 
     <h3>File Opening Modes</h3>
     <ul>
-      <li><b>r, r+</b> – Read</li>
-      <li><b>w, w+</b> – Write</li>
-      <li><b>a, a+</b> – Append</li>
+      <li><b>r, r+</b> – Read, Read and write(file must exist)</li>
+      <li><b>w, w+</b> – Write, write and read(creates a file if it doesnt exist)</li>
+      <li><b>a, a+</b> – Append, append and read(creates a file if it doesnt exist)</li>
     </ul>
 
     <h3>Steps to Work with File</h3>
     <ol>
-      <li>Define File Pointer</li>
-      <li>Open File in Mode</li>
-      <li>Perform Read/Write/Append</li>
-      <li>Close File</li>
+      <li>Define File Pointer: n C, before working with any file, you need to declare a file pointer of type FILE. This pointer is used to access and control the file. Syntax: FILE *filename</li>
+      <li>Open File in Mode: You must open the file using the fopen() function. While opening, you specify the file name and the mode (read, write, append, etc.)
+          Example: fp = fopen("filename.txt", "r");</li>
+      <li>Perform Read/Write/Append: After opening the file, you can perform different operations depending on the mode.
+            Example: Read → fscanf(fp, "%d", & num); or fgets(str, sizeof(str), fp);
+            Write → fprintf(fp, "Hello World"); or fputs("Text", fp);
+            Append → Adds new content to the end without deleting old data.</li>
+      <li>Close File: After all operations are complete, close the file with fclose(filename);</li>
     </ol>
 
     <h3>End of File (EOF)</h3>
@@ -310,4 +316,5 @@ int *p = arr;</code>
   </div>
 </body>
 </html>
+
 
