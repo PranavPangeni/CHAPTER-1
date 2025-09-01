@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 4: C Programming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .container {
+        background-color: rgb(216, 216, 216);
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    h1 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
+      margin-top: 20px;
+    }
+    h2 {
+      color: #444;
+      margin-top: 20px;
+    }
+    h3 {
+      color: #555;
+      margin-top: 15px;
+    }
+    p, ul {
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    code {
+      display: block;
+      background: #eee;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Unit 4: C Programming</h1>
+
+    <h2>Functions</h2>
+    <h3>Introduction and Syntax</h3>
+    <p>A function in C is a block of code designed to perform a specific task. It improves modularity and code reusability.</p>
+    <code>return_type function_name(parameter_list) {  
+   // function body  
+}</code>
+
+    <h3>Purpose and Advantages</h3>
+    <ul>
+      <li>Reusability of code</li>
+      <li>Better readability and maintainability</li>
+      <li>Helps in debugging and testing</li>
+      <li>Reduces code duplication</li>
+    </ul>
+
+    <h3>Components of a Function</h3>
+    <ul>
+      <li>Function Prototype</li>
+      <li>Function Definition</li>
+      <li>Function Call</li>
+      <li>Return Statement</li>
+    </ul>
+
+    <h3>Function Prototype</h3>
+    <code>int add(int a, int b);</code>
+
+    <h3>Function Definition</h3>
+    <code>int add(int a, int b) {  
+   return a + b;  
+}</code>
+
+    <h3>Function Call</h3>
+    <code>int result = add(5, 10);</code>
+
+    <h3>Types of Functions</h3>
+    <ul>
+      <li>Library Functions (e.g., printf, scanf)</li>
+      <li>User-Defined Functions</li>
+    </ul>
+
+    <h3>Passing Arguments</h3>
+    <p>Arguments can be passed in two ways:</p>
+    <ul>
+      <li><b>Call By Value</b> – Copies value into function.</li>
+      <li><b>Call By Reference</b> – Passes address, changes affect original variable.</li>
+    </ul>
+
+    <h3>Variable and its Scope</h3>
+    <ul>
+      <li><b>Local</b> – Declared inside function, accessible only within it.</li>
+      <li><b>Global</b> – Declared outside all functions, accessible everywhere.</li>
+    </ul>
+
+    <h3>Storage Classes</h3>
+    <ul>
+      <li><b>Automatic</b> – Default, created inside function.</li>
+      <li><b>External</b> – Declared with <code>extern</code>, global visibility.</li>
+      <li><b>Static</b> – Retains value between function calls.</li>
+      <li><b>Register</b> – Stored in CPU registers for faster access.</li>
+    </ul>
+
+    <h3>Function with Array Example</h3>
+    <code>void display(int arr[], int n) {  
+   for(int i=0; i&lt;n; i++)  
+      printf("%d ", arr[i]);  
+}</code>
+
+    <h3>Recursive Function</h3>
+    <p>A function that calls itself.</p>
+    <code>int factorial(int n) {  
+   if(n==0) return 1;  
+   else return n * factorial(n-1);  
+}</code>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Simplifies complex problems</li>
+      <li>Supports modular programming</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>Consumes more memory</li>
+      <li>Slower due to repeated calls</li>
+    </ul>
+
+    <h2>Structure and Union</h2>
+
+    <h3>Structure: Introduction and Syntax</h3>
+    <code>struct Student {  
+   int id;  
+   char name[50];  
+};</code>
+
+    <h3>Structure Size</h3>
+    <p>Depends on members and memory alignment.</p>
+
+    <h3>Accessing Members</h3>
+    <code>struct Student s1;  
+s1.id = 1;  
+strcpy(s1.name, "Ram");</code>
+
+    <h3>Nested Structure</h3>
+    <code>struct Address {  
+   char city[20];  
+};  
+struct Student {  
+   int id;  
+   struct Address addr;  
+};</code>
+
+    <h3>Array of Structures</h3>
+    <code>struct Student s[10];</code>
+
+    <h3>Passing Structure to Function</h3>
+    <code>void display(struct Student s) {  
+   printf("%d %s", s.id, s.name);  
+}</code>
+
+    <h3>Union: Introduction and Syntax</h3>
+    <code>union Data {  
+   int i;  
+   float f;  
+   char str[20];  
+};</code>
+
+    <h3>Comparison between Structure and Union</h3>
+    <ul>
+      <li>Structure: All members have separate memory.</li>
+      <li>Union: All members share same memory.</li>
+    </ul>
+
+    <h2>Pointers</h2>
+
+    <h3>Introduction and Syntax</h3>
+    <code>int *p;  
+int a = 5;  
+p = &amp;a;</code>
+
+    <h3>Usage and Concept</h3>
+    <p>Pointers store the address of variables, enabling direct memory access.</p>
+
+    <h3>Pointer and Function</h3>
+    <code>void update(int *x) {  
+   *x = *x + 1;  
+}</code>
+
+    <h3>Call by Reference</h3>
+    <code>update(&amp;a);</code>
+
+    <h3>Pointer with Arrays</h3>
+    <code>int arr[5] = {1,2,3,4,5};  
+int *p = arr;</code>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Efficient memory usage</li>
+      <li>Supports dynamic memory allocation</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>Complex syntax</li>
+      <li>Risk of dangling pointers</li>
+    </ul>
+
+    <h2>File Handling</h2>
+    <h3>Concept and Need</h3>
+    <p>Files store large data permanently, unlike variables.</p>
+
+    <h3>File Handling Functions</h3>
+    <ul>
+      <li><code>fopen(), fclose()</code> – Open/close file</li>
+      <li><code>getc(), putc()</code> – Read/write single character</li>
+      <li><code>fprintf(), fscanf()</code> – Formatted I/O</li>
+      <li><code>getw(), putw()</code> – Read/write integers</li>
+      <li><code>fgets(), fputs()</code> – String I/O</li>
+      <li><code>fread(), fwrite()</code> – Block I/O</li>
+      <li><code>remove(), rename()</code> – File operations</li>
+    </ul>
+
+    <h3>Random Access Functions</h3>
+    <ul>
+      <li><code>fseek()</code> – Move file pointer</li>
+      <li><code>rewind()</code> – Move to start</li>
+      <li><code>ftell()</code> – Return current position</li>
+    </ul>
+
+    <h3>File Opening Modes</h3>
+    <ul>
+      <li><b>r, r+</b> – Read</li>
+      <li><b>w, w+</b> – Write</li>
+      <li><b>a, a+</b> – Append</li>
+    </ul>
+
+    <h3>Steps to Work with File</h3>
+    <ol>
+      <li>Define File Pointer</li>
+      <li>Open File in Mode</li>
+      <li>Perform Read/Write/Append</li>
+      <li>Close File</li>
+    </ol>
+
+    <h3>End of File (EOF)</h3>
+    <p>Special condition that indicates no more data is available for reading.</p>
+
+    <h3>Typedef</h3>
+    <p><code>typedef</code> is used to create an alias name for data types.</p>
+    <code>typedef unsigned int uint;</code>
+  </div>
+</body>
+</html>
