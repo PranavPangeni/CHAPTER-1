@@ -190,7 +190,96 @@
             <p><strong>DDL (Data Definition Language):</strong> Includes commands like <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code> used to define or modify database structure.</p>
             <p><strong>DML (Data Manipulation Language):</strong> Includes <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> for manipulating data within the tables.</p>
         </div>
-            
+           <div class="subcont">
+            <h2>Normalization</h2>
+            <p><strong>Introduction:</strong> Normalization is a process in database design that reduces redundancy and improves data consistency by organizing data into smaller, related tables.</p>
+            <h3>Normal Forms:</h3>
+            <ul>
+                <li><strong>1NF:</strong> Atomic values, no repeating groups.</li>
+                <li><strong>2NF:</strong> Must be in 1NF, no partial dependency on composite keys.</li>
+                <li><strong>3NF:</strong> Must be in 2NF, no transitive dependency between non-key attributes.</li>
+            </ul>
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Eliminates redundancy</li>
+                <li>Ensures data consistency</li>
+                <li>Saves storage space</li>
+            </ul>
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li>Complex design</li>
+                <li>Requires more joins (slower queries sometimes)</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>Database Administrator (DBA)</h2>
+            <p>A DBA is responsible for the overall management and maintenance of a database system.</p>
+            <h3>Roles of DBA:</h3>
+            <ul>
+                <li>Database design and implementation</li>
+                <li>Security management</li>
+                <li>Backup and recovery</li>
+                <li>Performance tuning</li>
+                <li>User and role management</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>ER Diagrams</h2>
+            <p><strong>Introduction:</strong> Entity-Relationship Diagrams represent the logical structure of a database using entities, attributes, and relationships.</p>
+            <ul>
+                <li><strong>Entity:</strong> Objects like Student, Teacher (rectangle).</li>
+                <li><strong>Attribute:</strong> Properties of entities (ellipse).</li>
+                <li><strong>Relationship:</strong> Associations between entities (diamond).</li>
+                <li><strong>Cardinality:</strong> 1:1, 1:M, M:N.</li>
+                <li><strong>Degree:</strong> Number of entities in a relationship (binary, ternary).</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>SQL</h2>
+            <p><strong>DDL:</strong> CREATE, ALTER, DROP (structure).</p>
+            <p><strong>DML:</strong> INSERT, UPDATE, DELETE, SELECT (data).</p>
+             <h2>Operators</h2>
+            <ul>
+                <li><strong>AND:</strong> Both conditions true.</li>
+                <li><strong>OR:</strong> At least one condition true.</li>
+                <li><strong>NOT:</strong> Negates condition.</li>
+            </ul>
+        </div>
+
+        <div class="subcont">
+            <h2>WHERE Clause</h2>
+            <p>Filters records based on conditions.</p>
+            <code>SELECT * FROM Students WHERE Age > 18;</code>
+        </div>
+
+        <div class="subcont">
+            <h2>ORDER BY</h2>
+            <p>Sorts records in ascending or descending order.</p>
+            <code>SELECT * FROM Students ORDER BY Name ASC;</code>
+        </div>
+
+        <div class="subcont">
+            <h2>SQL Joins</h2>
+            <ul>
+                <li><strong>INNER JOIN:</strong> Matching rows in both tables.</li>
+                <li><strong>LEFT JOIN:</strong> All rows from left + matches from right.</li>
+                <li><strong>RIGHT JOIN:</strong> All rows from right + matches from left.</li>
+                <li><strong>FULL JOIN:</strong> All rows from both tables.</li>
+            </ul>
+        </div>  </div>
+
+        <div class="subcont">
+            <h2>Data Constraints</h2>
+            <ul>
+                <li><strong>NOT NULL:</strong> Prevents null values.</li>
+                <li><strong>UNIQUE:</strong> Ensures all values are unique.</li>
+                <li><strong>PRIMARY KEY:</strong> Unique + not null.</li>
+                <li><strong>AUTO INCREMENT:</strong> Generates unique IDs automatically.</li>
+            </ul>
+        </div> 
          <div class="subcont">
             <h2><strong>Past Year Questions of DBMS (2020-2024 and Model Questions)</strong></h2>
             <ol>
@@ -329,3 +418,4 @@
 
 </body>
 </html>
+
